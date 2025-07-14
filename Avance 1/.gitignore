@@ -1,0 +1,16 @@
+# Archivos de configuración del editor
+.vscode/
+
+# Carpetas de caché de Python
+__pycache__/
+*.pyc
+
+# Entornos virtuales de Python (muy importante para el futuro)
+.venv
+venv/
+ENV/
+env/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
