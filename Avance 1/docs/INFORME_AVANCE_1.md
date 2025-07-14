@@ -77,5 +77,5 @@ El principal hallazgo es que la base de datos, aunque estructuralmente bien defi
 **c. Tablas Finales Resultantes y Relaciones:**
 Las tablas finales de este avance son las 11 tablas del modelo transaccional cargadas en la base de datos `EcommerceDB`. El siguiente diagrama de base de datos, generado desde SSMS, muestra sus relaciones.
 
-![Diagrama de Base de Datos](Avance 1/docs/assets/der_ecommerce.png)
 
+![Diagrama de Base de Datos Transaccional](./assets/der_ecommerce.png)
