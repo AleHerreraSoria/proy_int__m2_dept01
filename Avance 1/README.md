@@ -26,7 +26,7 @@ Para configurar y ejecutar este avance, sigue los siguientes pasos:
 
 2.  **Clonar el Repositorio:**
     ```bash
-    git clone [https://github.com/AleHerreraSoria/proy_int__m2_dept01.git](https://github.com/AleHerreraSoria/proy_int__m2_dept01.git)
+    git clone https://github.com/AleHerreraSoria/proy_int__m2_dept01.git
     ```
 
 3.  **Configurar el Script de Carga:**
