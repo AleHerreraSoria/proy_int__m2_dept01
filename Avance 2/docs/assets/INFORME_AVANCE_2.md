@@ -131,7 +131,7 @@ erDiagram
     FactSales ||--|{ DimGeography : "enviada a"
 ```
 
-![Diagrama del Modelo en Estrella](./assets/starschema_EcommerceDB.png)
+![Diagrama del Modelo en Estrella](../docs/assets/starschema_EcommerceDB.png)
 
 **c. Justificación de Decisiones de Diseño:**
 
