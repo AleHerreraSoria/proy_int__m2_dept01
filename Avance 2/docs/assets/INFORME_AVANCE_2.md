@@ -131,8 +131,6 @@ erDiagram
     FactSales ||--|{ DimGeography : "enviada a"
 ```
 
-![Diagrama del Modelo en Estrella](../docs/assets/starschema_EcommerceDB.png)
-
 **c. Justificación de Decisiones de Diseño:**
 
 * **Modelo en Estrella:** Se eligió por su simplicidad, rendimiento y facilidad de uso para los analistas. Evita los `JOINs` complejos de un modelo normalizado.
