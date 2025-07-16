@@ -1,4 +1,6 @@
 # Informe Técnico: Avance 1 del Proyecto Integrador
+*Confeccionado por: Alejandro N. Herrera Soria*
+*- La Rioja (AR), 23 de Julio de 2025*
 
 **Proyecto:** Optimización de una plataforma para un comercio electrónico con modelado dimensional y DBT.
 **Fase:** Avance 1 - Carga y Entendimiento de los Datos.
