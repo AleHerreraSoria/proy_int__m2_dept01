@@ -7,7 +7,7 @@
 
 Este documento presenta de manera consolidada el trabajo realizado, los hallazgos obtenidos y las decisiones tomadas durante la primera fase del proyecto, siguiendo la estructura de los puntos de trabajo (PI) propuestos.
 
-### HW 1: Configuración del Entorno de Trabajo
+### PI 1: Configuración del Entorno de Trabajo
 
 **a. Instalación y Configuración del SGBD:**
 Se ha configurado un entorno de base de datos relacional robusto. Aunque la consigna sugería PostgreSQL, los scripts de datos proporcionados (`.sql`) utilizaban una sintaxis T-SQL, específica de Microsoft SQL Server (ej. `GO`, `IDENTITY(1,1)`, `NVARCHAR`). Para garantizar la compatibilidad y evitar la traducción de scripts, se tomó la decisión técnica de instalar y configurar **SQL Server 2022 Developer Edition** junto con su herramienta de gestión **SQL Server Management Studio (SSMS)**. El entorno está completamente funcional.
@@ -15,7 +15,7 @@ Se ha configurado un entorno de base de datos relacional robusto. Aunque la cons
 **b. Creación de Base de Datos y Conexión ORM:**
 Se creó exitosamente la base de datos de trabajo denominada `EcommerceDB`. Se desarrolló un script en Python que utiliza la librería `SQLAlchemy` (un Object-Relational Mapper - ORM) y `pyodbc` para establecer una conexión programática con la base de datos. Esta conexión ha sido verificada y se utiliza para la automatización de la carga y la ejecución de análisis exploratorios.
 
-### HW 2: Carga Inicial de Datos
+### PI 2: Carga Inicial de Datos
 
 **a. Creación de Tablas e Importación de Datos:**
 Se ejecutó el script `1.Create_ddl.sql` para crear la estructura completa de 11 tablas del modelo transaccional. Posteriormente, se desarrolló un script de carga en Python que procesa los 11 archivos `.sql` restantes en un orden lógico que respeta las restricciones de llaves foráneas. Este script es resiliente: maneja errores de integridad de datos (reportándolos como advertencias sin detener la carga) y problemas de formato de fecha, asegurando una carga máxima de datos válidos.
@@ -23,7 +23,7 @@ Se ejecutó el script `1.Create_ddl.sql` para crear la estructura completa de 11
 **b. Ajuste de Tipos de Datos:**
 Los tipos de datos fueron definidos en el script DDL (`DECIMAL(10,2)`, `INT`, `NVARCHAR`, `DATETIME`, etc.) y se respetaron durante todo el proceso de carga. Esto preserva la integridad semántica de cada campo.
 
-### HW 3: Tratamiento de Campos Semi-estructurados
+### PI 3: Tratamiento de Campos Semi-estructurados
 
 **a. Identificación de Columnas:**
 El análisis exploratorio identificó la tabla `DireccionesEnvio` como la fuente principal de datos semi-estructurados. El problema detectado es más profundo que una simple concatenación: existe una **corrupción sistémica de la relación entre Ciudad y Provincia**. Por ejemplo, se encontraron registros de "Ushuaia" en la provincia de "Buenos Aires", lo cual es geográficamente incorrecto.
@@ -31,7 +31,7 @@ El análisis exploratorio identificó la tabla `DireccionesEnvio` como la fuente
 **b. Aplicación de Técnicas de Limpieza:**
 La decisión, alineada con las buenas prácticas de ingeniería de datos (ELT), es **no modificar los datos en la base de datos fuente**. La limpieza y estructuración de estos campos se realizará en la fase de transformación (Avance 3), donde se creará una dimensión `DimGeography` validada contra una fuente de verdad externa.
 
-### HW 4: Análisis Exploratorio y Evaluación de Calidad de Datos
+### PI 4: Análisis Exploratorio y Evaluación de Calidad de Datos
 
 **a. Exploración con SQL y Python (ORM):**
 Se utilizó tanto SSMS para consultas directas como un script de Python con SQLAlchemy y Pandas para un análisis más profundo y documentado.
@@ -59,7 +59,7 @@ Se validaron las llaves primarias y foráneas definidas en el DDL. Se identifica
 **d. Propuesta de Acciones:**
 Se ha propuesto un plan de acción detallado para cada inconsistencia encontrada, que se documenta en el siguiente punto.
 
-### HW 5: Reporte de Hallazgos
+### PI 5: Reporte de Hallazgos
 
 **a. Principales Insights y Problemas Encontrados:**
 El principal hallazgo es que la base de datos, aunque estructuralmente bien definida, sufre de problemas de calidad de datos severos que impiden un análisis fiable. El problema más bloqueante es la **imposibilidad de cargar los datos de ventas (`DetalleOrdenes`) por inconsistencias de integridad**, seguido de la corrupción de datos geográficos y las inconsistencias financieras.
