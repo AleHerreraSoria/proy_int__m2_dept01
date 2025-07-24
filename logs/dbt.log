@@ -1,0 +1,98 @@
+[0m03:39:48.947512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A110FB3DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A113AB7920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A113C074A0>]}
+
+
+============================== 03:39:48.962902 | b408d240-2afd-4d4f-aec4-6244bce52f63 ==============================
+[0m03:39:48.962902 [info ] [MainThread]: Running with dbt=1.10.4
+[0m03:39:48.962902 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\samla\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt init ecommerce_dbt', 'send_anonymous_usage_stats': 'True'}
+[0m03:39:48.997910 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\samla\.dbt
+[0m03:39:48.997910 [debug] [MainThread]: Starter project path: D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\dbt\include\starter_project
+[0m03:39:49.019687 [info ] [MainThread]: 
+Your new dbt project "ecommerce_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m03:39:49.019687 [info ] [MainThread]: Setting up your profile.
+[0m03:42:42.301728 [error] [MainThread]: Encountered an error:
+
+[0m03:42:42.301728 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\dbt\cli\requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\dbt\cli\requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\click\termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Lib\site-packages\click\termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m03:42:42.317778 [debug] [MainThread]: Command `dbt init` failed at 03:42:42.301728 after 173.55 seconds
+[0m03:42:42.319108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A110FB3DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1158C55E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1158D8200>]}
+[0m03:42:42.319108 [debug] [MainThread]: Flushing usage events
+[0m03:42:43.057211 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:48:14.588475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EACC163FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EACBD73AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EACC5EF920>]}
+
+
+============================== 03:48:14.595028 | 83f5413b-dcad-44b2-9419-0d2f655ee878 ==============================
+[0m03:48:14.595028 [info ] [MainThread]: Running with dbt=1.10.4
+[0m03:48:14.595028 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\samla\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m03:48:14.630548 [info ] [MainThread]: dbt version: 1.10.4
+[0m03:48:14.633129 [info ] [MainThread]: python version: 3.12.10
+[0m03:48:14.634312 [info ] [MainThread]: python path: D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\.venv\Scripts\python.exe
+[0m03:48:14.634850 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m03:48:14.635396 [info ] [MainThread]: Using profiles dir at C:\Users\samla\.dbt
+[0m03:48:14.635921 [info ] [MainThread]: Using profiles.yml file at C:\Users\samla\.dbt\profiles.yml
+[0m03:48:14.636454 [info ] [MainThread]: Using dbt_project.yml file at D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\dbt_project.yml
+[0m03:48:14.636454 [info ] [MainThread]: Configuration:
+[0m03:48:14.637491 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m03:48:14.639038 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m03:48:14.640050 [info ] [MainThread]: Required dependencies:
+[0m03:48:14.640050 [debug] [MainThread]: Executing "git --help"
+[0m03:48:14.734490 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m03:48:14.734490 [debug] [MainThread]: STDERR: "b''"
+[0m03:48:14.735495 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m03:48:14.736474 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m03:48:14.737473 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m03:48:14.737473 [info ] [MainThread]: dbt looked for a profiles.yml file in C:\Users\samla\.dbt\profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m03:48:14.738988 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <D:\SoyHenry\M2 - Modelado de Datos y Bases de Datos Relacionales\Proyecto Integrador M2\dbt_project.yml> not found
+
+[0m03:48:14.740000 [debug] [MainThread]: Command `dbt debug` failed at 03:48:14.740000 after 0.31 seconds
+[0m03:48:14.740000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EACC242C60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EACC5477D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EACC9149E0>]}
+[0m03:48:14.740000 [debug] [MainThread]: Flushing usage events
+[0m03:48:15.493193 [debug] [MainThread]: An error was encountered while trying to flush usage events

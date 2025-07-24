@@ -4,20 +4,18 @@ from sqlalchemy import create_engine, text
 import time
 
 # --- CONFIGURACIÓN DE LA CONEXIÓN A SQL SERVER ---
-# Actualizamos estos valores con los de nuestra instancia local.
-# Cuando usamos la autenticación de Windows, podemos omitir USERNAME y PASSWORD
-# y agregar 'Trusted_Connection=yes' al connection_string.
-SERVER_NAME = "DESKTOP-4M217QU"  # Nombre de nuestro servidor/instancia
+
+SERVER_NAME = "DESKTOP-4M217QU"  
 DATABASE_NAME = "EcommerceDB"
 USERNAME = "tu_usuario"  # Opcional, si usamos autenticación SQL
 PASSWORD = "tu_contraseña" # Opcional, si usamos autenticación SQL
 DRIVER = "{ODBC Driver 17 for SQL Server}"
 
 # Directorio donde se encuentran los scripts SQL
-SQL_SCRIPTS_DIR = "sql_scripts"
+SQL_SCRIPTS_DIR = "Avance 1/sql_scripts_clean"
 
 # --- ORDEN DE EJECUCIÓN DE SCRIPTS ---
-# El orden es crucial para respetar las Foreign Keys
+# (crucial para respetar las Foreign Keys
 SCRIPTS_ORDER = [
     # Creación de la DB y Tablas
     '1.Create_ddl.sql',

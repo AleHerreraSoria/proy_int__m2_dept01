@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: sql_server_dbo
+    database: EcommerceDB
+    schema: dbo
+    tables:
+      - name: Usuarios
+      - name: Productos
+      - name: Categorias
+      - name: Ordenes
+      - name: DetalleOrdenes
+      - name: DireccionesEnvio
